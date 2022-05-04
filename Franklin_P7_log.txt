@@ -1,0 +1,173 @@
+April 6, 2022
+Anthony Franklin
+afranklin18@cnm.edu
+FranklinP7
+
+**** Program to demonstrate the implementation of hash tables and searchable link lists in C++ ****
+
+			                    Log file name: Franklin_P7_log.txt
+
+File for loading the hash table : BJ_Persons2000.txt(2000 Persons)
+File for searching : BJ_42PersonsToFind.txt(42 Persons)
+
+***Inserting Person Objects into our hash table....
+
+****Results of hash...
+
+Distribution:
+Minimum List Length: 10
+Maximum List Length: 34
+Average List Length: 20
+Standard Deviation : 4.63
+
+[0]   24, 1.20%      [1]   21, 1.05%      [2]   17, 0.85%      [3]   20, 1.00%      
+[4]   15, 0.75%      [5]   18, 0.90%      [6]   22, 1.10%      [7]   22, 1.10%      
+[8]   18, 0.90%      [9]   22, 1.10%      [10] 22, 1.10%      [11] 20, 1.00%      
+[12] 15, 0.75%      [13] 31, 1.55%      [14] 22, 1.10%      [15] 18, 0.90%      
+[16] 20, 1.00%      [17] 19, 0.95%      [18] 13, 0.65%      [19] 21, 1.05%      
+[20] 19, 0.95%      [21] 21, 1.05%      [22] 17, 0.85%      [23] 19, 0.95%      
+[24] 19, 0.95%      [25] 16, 0.80%      [26] 26, 1.30%      [27] 16, 0.80%      
+[28] 24, 1.20%      [29] 18, 0.90%      [30] 19, 0.95%      [31] 20, 1.00%      
+[32] 21, 1.05%      [33] 14, 0.70%      [34] 20, 1.00%      [35] 24, 1.20%      
+[36] 17, 0.85%      [37] 17, 0.85%      [38] 18, 0.90%      [39] 21, 1.05%      
+[40] 10, 0.50%      [41] 23, 1.15%      [42] 28, 1.40%      [43] 34, 1.70%      
+[44] 21, 1.05%      [45] 17, 0.85%      [46] 31, 1.55%      [47] 17, 0.85%      
+[48] 21, 1.05%      [49] 25, 1.25%      [50] 17, 0.85%      [51] 23, 1.15%      
+[52] 25, 1.25%      [53] 31, 1.55%      [54] 19, 0.95%      [55] 15, 0.75%      
+[56] 22, 1.10%      [57] 14, 0.70%      [58] 15, 0.75%      [59] 16, 0.80%      
+[60] 19, 0.95%      [61] 22, 1.10%      [62] 18, 0.90%      [63] 20, 1.00%      
+[64] 17, 0.85%      [65] 16, 0.80%      [66] 30, 1.50%      [67] 24, 1.20%      
+[68] 21, 1.05%      [69] 15, 0.75%      [70] 23, 1.15%      [71] 21, 1.05%      
+[72] 22, 1.10%      [73] 18, 0.90%      [74] 10, 0.50%      [75] 21, 1.05%      
+[76] 18, 0.90%      [77] 19, 0.95%      [78] 20, 1.00%      [79] 19, 0.95%      
+[80] 18, 0.90%      [81] 25, 1.25%      [82] 22, 1.10%      [83] 21, 1.05%      
+[84] 21, 1.05%      [85] 20, 1.00%      [86] 12, 0.60%      [87] 33, 1.65%      
+[88] 18, 0.90%      [89] 11, 0.55%      [90] 18, 0.90%      [91] 26, 1.30%      
+[92] 15, 0.75%      [93] 26, 1.30%      [94] 10, 0.50%      [95] 16, 0.80%      
+[96] 23, 1.15%      [97] 21, 1.05%      [98] 21, 1.05%      [99] 20, 1.00%      
+
+Searching for: FIELDS, STACEY  83 May 11, 1938
+Found FIELDS, STACEY  83 May 11, 1938
+
+Searching for: LITTLE, LANCE  17 July 20, 2004
+Found LITTLE, LANCE  17 July 20, 2004
+
+Searching for: KIM, LOUISE  36 May 6, 1986
+Found KIM, LOUISE  36 May 6, 1986
+
+Searching for: HARVEY, JON  46 July 5, 1976
+Found HARVEY, JON  46 July 5, 1976
+
+Searching for: BROWN, LENA  86 May 7, 1935
+Found BROWN, LENA  86 May 7, 1935
+
+Searching for: NELSON, DENNIS  38 February  7, 1984
+Found NELSON, DENNIS  38 February  7, 1984
+
+Searching for: BURKE, PAULINE  22 August 18, 1999
+Found BURKE, PAULINE  22 August 18, 1999
+
+Searching for: SCOTT, DIANNE  24 April 11, 1997
+Found SCOTT, DIANNE  24 April 11, 1997
+
+Searching for: MILLS, WADE  40 October 18, 1981
+Found MILLS, WADE  40 October 18, 1981
+
+Searching for: LAWSON, TIM  91 August 28, 1930
+LAWSON, TIM NOT found!
+
+Searching for: BARNES, DEREK  52 April 20, 1969
+Found BARNES, DEREK  52 April 20, 1969
+
+Searching for: BAILEY, MARY  102 September 19, 1919
+BAILEY, MARY NOT found!
+
+Searching for: HART, DIANNE  63 September 28, 1958
+Found HART, DIANNE  63 September 28, 1958
+
+Searching for: CAMPBELL, THEODORE  49 November 16, 1972
+Found CAMPBELL, THEODORE  49 November 16, 1972
+
+Searching for: JONES, DAISY  40 July 8, 1981
+Found JONES, DAISY  40 July 8, 1981
+
+Searching for: JOHNSTON, JIM  65 October 9, 1956
+Found JOHNSTON, JIM  65 October 9, 1956
+
+Searching for: ORTIZ, DELORES  34 May 6, 1988
+ORTIZ, DELORES NOT found!
+
+Searching for: KIM, LOUISE  90 September 20, 1931
+KIM, LOUISE NOT found!
+
+Searching for: MILLS, RENEE  40 October 18, 1981
+MILLS, RENEE NOT found!
+
+Searching for: JOHNSTON, JIM  65 November 9, 1956
+JOHNSTON, JIM NOT found!
+
+Searching for: PIERCE, CALVIN  46 July 15, 1975
+PIERCE, CALVIN NOT found!
+
+Searching for: KRALC, CATHY  17 November 28, 2004
+KRALC, CATHY NOT found!
+
+Searching for: DAVIS, ANTONIO  61 November 4, 1961
+DAVIS, ANTONIO NOT found!
+
+Searching for: BURTON, CHESTER  97 April 2, 1925
+BURTON, CHESTER NOT found!
+
+Searching for: CARR, JUDY  39 August 7, 1982
+Found CARR, JUDY  39 August 7, 1982
+
+Searching for: ANDERSON, TED  22 January 8, 2000
+Found ANDERSON, TED  22 January 8, 2000
+
+Searching for: ROBERTSON, WILLIAM  75 December 24, 1946
+Found ROBERTSON, WILLIAM  75 December 24, 1946
+
+Searching for: NGUYEN, PENNY  49 September 4, 1973
+Found NGUYEN, PENNY  49 September 4, 1973
+
+Searching for: HARVEY, JON  66 July 5, 1956
+HARVEY, JON NOT found!
+
+Searching for: AMAM, HANNAH  39 April 21, 1982
+AMAM, HANNAH NOT found!
+
+Searching for: BURKE, PAULINE  21 June 25, 2000
+BURKE, PAULINE NOT found!
+
+Searching for: GRAY, ANTHONY  73 November 3, 1949
+Found GRAY, ANTHONY  73 November 3, 1949
+
+Searching for: KIM, CHRISTINE  52 October 29, 1969
+Found KIM, CHRISTINE  52 October 29, 1969
+
+Searching for: RAY, ANTONIO  85 May 9, 1936
+Found RAY, ANTONIO  85 May 9, 1936
+
+Searching for: SCHMIDT, ELSIE  86 September 27, 1935
+Found SCHMIDT, ELSIE  86 September 27, 1935
+
+Searching for: PIERCE, CALVIN  45 July 15, 1976
+Found PIERCE, CALVIN  45 July 15, 1976
+
+Searching for: LAWSON, TIM  65 June 2, 1957
+Found LAWSON, TIM  65 June 2, 1957
+
+Searching for: TERRY, FRANCES  86 August 19, 1935
+Found TERRY, FRANCES  86 August 19, 1935
+
+Searching for: FIELDS, STACEY  83 July 12, 1938
+FIELDS, STACEY NOT found!
+
+Searching for: MYERS, DANIEL  75 June 23, 1946
+MYERS, DANIEL NOT found!
+
+Searching for: NEAL, KAREN  26 November 14, 1995
+Found NEAL, KAREN  26 November 14, 1995
+
+Searching for: OLSON, ALAN  56 November 3, 1966
+Found OLSON, ALAN  56 November 3, 1966
