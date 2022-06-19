@@ -67,22 +67,24 @@ void ListMgr::Sort()
 	*p = *last->GetPerson();
 	Pop_back();
 	lm->Insert(p);
-	lm->Show();
-	PersonNode* temp2 = lm->first;
-	while (temp2->GetNext())
-	{
-		Person* p = new Person;
-		*p = *temp2->GetPerson();
-		temp2 = temp2->GetNext();
-		lm->Pop_front();
-		Insert(p);
-	}
-	Person* p2 = new Person;
-	*p2 = *lm->last->GetPerson();
-	lm->Pop_back();
-	Insert(p2);
-	delete lm;
-	Show();
+	
+//Not sure why this duplicate code is present.
+// 	lm->Show();
+// 	PersonNode* temp2 = lm->first;
+// 	while (temp2->GetNext())
+// 	{
+// 		Person* p = new Person;
+// 		*p = *temp2->GetPerson();
+// 		temp2 = temp2->GetNext();
+// 		lm->Pop_front();
+// 		Insert(p);
+// 	}
+// 	Person* p2 = new Person;
+// 	*p2 = *lm->last->GetPerson();
+// 	lm->Pop_back();
+// 	Insert(p2);
+// 	delete lm;
+// 	Show();
 }
 
 void ListMgr::Delete(PersonNode* temp)
